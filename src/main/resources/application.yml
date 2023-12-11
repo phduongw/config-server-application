@@ -1,7 +1,9 @@
 spring:
   application:
-    name: CONFIG-SERVER
+    name: ConfigServer
   cloud:
+    bus:
+      enabled: true
     config:
       server:
         git:
@@ -10,5 +12,15 @@ spring:
           password: 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
           clone-on-start: true
           default-label: main
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 server:
   port: 8012
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
