@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/phduongw/config-server
+          username: phduongw
+          password: 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
+          clone-on-start: true
+          default-label: main
+server:
+  port: 8012
